@@ -51,5 +51,5 @@ manifest='{
     }
 }
 '
-echo $manifest #| jq | tee manifest.json
+echo $manifest | jq | tee manifest.json
 zip "${TASSEL_NAME}" background.js manifest.json bookmarks.json LICENSE icons &>/dev/null
